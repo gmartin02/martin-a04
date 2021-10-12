@@ -10,29 +10,28 @@ import java.util.*;
 public class Solution41 {
     private List<String> nameList = new ArrayList<>();
     private List<String> sortedList = new ArrayList<>();
-    private static final String INPUT_TXT = "data\\exercise41_input.txt";
+    private static final File data = new File("data/exercise41_input.txt");
 
     public static void main(String[] args) {
         Solution41 solution = new Solution41();
         //call read file function
-        solution.nameList = solution.getFileData(INPUT_TXT);
+        solution.nameList = solution.getFileData();
         //pass nameList to alphabeticSorter
         solution.sortedList = solution.alphabeticSorter(solution.nameList);
         //create the output file
-        solution.outputFileData(solution.sortedList);
+        solution.outputFileData();
 
     }
 
-    public List<String> getFileData(String fileLocation) {
+    public List<String> getFileData() {
         ArrayList<String> sArray = new ArrayList<>();
         try {
             //create a buffered reader insider a try/catch block
-            try (BufferedReader br = new BufferedReader(new FileReader(fileLocation))) {
-                String s;
+            try (Scanner sc = new Scanner(data)) {
                 //while the next line is not null
-                while ((s = br.readLine()) != null) {
+                while (sc.hasNextLine()) {
                     //store that line in the String array
-                    sArray.add(s);
+                    sArray.add(sc.nextLine());
                 }
             }
         } catch (Exception e) {
@@ -51,7 +50,7 @@ public class Solution41 {
         return nameList;
     }
 
-    public void outputFileData(List<String> sortedList) {
+    public void outputFileData() {
         //create a buffered writer
         try {
             //create a buffered reader insider a try/catch block

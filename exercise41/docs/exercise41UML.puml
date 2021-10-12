@@ -4,8 +4,14 @@ class Solution41 {
     -List<String> sortedList
     -String fileLocation
 
-    +getFileData(fileLocation)
+    +main()
+    'calls each of the below methods
+    '   no need for a separate class as each
+    '   method is directly related to each other
+    '   and as new class would likely only have a single method
+    +getFileData()
     +alphabeticSorter(nameList)
-    +outputFileData(sortedList)
+    +outputFileData()
 }
+
 @enduml
