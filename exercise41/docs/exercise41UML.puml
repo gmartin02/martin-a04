@@ -1,11 +1,11 @@
 @startuml
-'https://plantuml.com/sequence-diagram
+class Solution41 {
+    -List<String> nameList
+    -List<String> sortedList
+    -String fileLocation
 
-autonumber
-
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
-
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+    +getFileData(fileLocation)
+    +alphabeticSorter(nameList)
+    +outputFileData(sortedList)
+}
 @enduml

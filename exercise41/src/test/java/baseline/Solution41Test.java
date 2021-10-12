@@ -6,15 +6,31 @@ package baseline;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class Solution41Test {
     @Test
-    public void alphabeticSorterTest() {
+    void alphabeticSorterTest() {
         Solution41 solution = new Solution41();
-        String [] nameList = {"Ling, Mai", "Johnson, Jim", "Zarnecki, Sabrina", "Jones, Chris", "Jones, Aaron", "Swift, Geoffrey", "Xiong, Fong"};
+        ArrayList<String> nameList = new ArrayList<>();
+        nameList.add("Ling, Mai");
+        nameList.add("Johnson, Jim");
+        nameList.add("Zarnecki, Sabrina");
+        nameList.add("Jones, Chris");
+        nameList.add("Jones, Aaron");
+        nameList.add("Swift, Geoffrey");
+        nameList.add("Xiong, Fong");
 
-        String [] sortedList = {"Johnson, Jim", "Jones, Aaron", "Jones, Chris", "Ling, Mai", "Swift, Geoffrey", "Xiong, Fong",  "Zarnecki, Sabrina"};
+        ArrayList<String> sortedList = new ArrayList<>();
+        sortedList.add("Johnson, Jim");
+        sortedList.add("Jones, Aaron");
+        sortedList.add("Jones, Chris");
+        sortedList.add("Ling, Mai");
+        sortedList.add("Swift, Geoffrey");
+        sortedList.add("Xiong, Fong");
+        sortedList.add("Zarnecki, Sabrina");
 
         assertEquals(sortedList, solution.alphabeticSorter(nameList));
     }
