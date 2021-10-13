@@ -1,0 +1,11 @@
+
+R
+java:S1854"7Remove this useless assignment to local variable "csv".(„Ÿ˜»øÿÿÿÿ
+C
+java:S1481"(Remove this unused "csv" local variable.(„Ÿ˜»øÿÿÿÿ
+M
+java:S1128	"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8°éÛ¹Ç/
+P
+java:S1128".Remove this unused import 'java.util.Scanner'.(ÒÜÅ¸úÿÿÿÿ8±éÛ¹Ç/
+C
+java:S1068"(Remove this unused "data" private field.(Õ¹å¡úÿÿÿÿ
