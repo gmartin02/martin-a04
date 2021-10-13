@@ -11,22 +11,32 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Solution42 {
-    private File data = new File("data/exercise42_input.txt");
+    private final File data = new File("data/exercise42_input.txt");
     public static void main(String[] args) {
         ParseCSV csv = new ParseCSV();
-
+        csv.separatedData = csv.separateData();
+        csv.lastNames = csv.createLastNameArray();
+        csv.firstNames = csv.createFirstNameArray();
+        csv.salaries = csv.createSalaryArray();
+        csv.outputEmployees();
     }
 
     public List<String> getFileData() {
-        //create a buffered reader insider a try/catch block
-            //while the next line is not null
-                //store that line in the String array
-        //return the created String array
-    }
+        ArrayList<String> sArray = new ArrayList<>();
+        try {
+            //create a buffered reader insider a try/catch block
+            try (Scanner sc = new Scanner(data)) {
+                //while the next line is not null
+                while (sc.hasNextLine()) {
+                    //store that line in the String array
+                    sArray.add(sc.nextLine());
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-    public void outputFileData() {
-        //create a buffered writer
-            //for loop through the length of the list
-                //print out each last, first, and salary adn then a new line
+        //return the created String array
+        return sArray;
     }
 }

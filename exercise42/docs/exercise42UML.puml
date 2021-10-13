@@ -1,7 +1,32 @@
 @startuml
 class Solution42 {
+    -data
+    'stores the output file location as a variable
+
+    +main()
+    +getFileData()
+}
+
+class ParseCSV {
+    #List<String> separatedData
+    #List<String> lastNames
+    #List<String> firstNames
+    #List<String> salaries
+    'protected so only classes in the package can access these
+
+    +separateData()
+    +createLastNameArray()
+    +createFirstNameArray()
+    +createSalaryArray()
+    +outputEmployees()
+    'since the format is so specific to this problem
+    'it makes more sense to put it in the class it pertains to
+    'as other applications of the main class may not want
+    'this format all the time
 
 }
+
+Solution42 --o ParseCSV
 
 
 
