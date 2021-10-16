@@ -7,12 +7,29 @@ package baseline;
 import java.util.Scanner;
 
 public class Solution43 {
+
     private static final Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
         WebsiteCreator wc = new WebsiteCreator();
+        Solution43 solution = new Solution43();
+
+        String siteName = solution.getSiteName();
+        String author = solution.getSiteAuthor();
+
+        boolean js = solution.javaFolderAnswer();
+        boolean css = solution.cssFolderAnswer();
 
         //calls all the Website Creator methods
-        wc.createHTMLFile();
+        wc.createWebsiteFolder(siteName);
+        wc.createHTMLFile(author, siteName);
+
+        if(js) {
+            wc.createJavaFolder(siteName);
+        }
+
+        if(css) {
+            wc.createCSSFolder(siteName);
+        }
     }
 
     public String getSiteName() {

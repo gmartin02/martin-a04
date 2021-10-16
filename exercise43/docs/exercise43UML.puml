@@ -1,0 +1,25 @@
+@startuml
+class Solution43 {
+    +main()
+    'main is where the siteName and author come from so
+    'they are not class variables
+    +getSiteName()
+    +getSiteAuthor()
+    +javaFolderAnswer()
+    +cssFolderAnswer()
+}
+
+class WebsiteCreator {
+    String output = "Created ./website/";
+    String website = "website/";
+    'these variables help format output
+
+    +createWebsiteFolder(String siteName): File
+    +createHTMLFile(String author, String siteName): File
+    +createJavaFolder(String siteName): File
+    +createCSSFolder(String siteName): File
+    'all methods return a File to make unit testing easier
+}
+
+Solution43 --o WebsiteCreator
+@enduml
