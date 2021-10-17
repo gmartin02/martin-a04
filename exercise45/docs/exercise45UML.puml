@@ -1,0 +1,16 @@
+@startuml
+class Solution45 {
+    +List<String> fileInput = new ArrayList<>()
+    'holds file input
+    +List<String> replacedList = new ArrayList<>()
+    'holds altered input
+    -File data = new File("data/exercise45_input.txt")
+    'constant variable to hold the input file
+
+    +main()
+    +getFileData(): List<String>
+    +replaceUtilizeWithUsed(): List<String>
+    +getOutputFileName(): String
+    +writeToFile(String outputName)
+}
+@enduml
