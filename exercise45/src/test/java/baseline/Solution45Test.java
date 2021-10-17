@@ -7,14 +7,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class Solution45Test {
 
     @Test
-    void getFileData() {
+    void getFileDataTest() {
     }
 
     @Test
-    void replaceUtilizeWithUsed() {
+    void replaceUtilizeWithUsedTest() {
     }
 
     @Test
-    void writeToFile() {
+    void writeToFileTest() {
     }
 }
