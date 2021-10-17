@@ -1,0 +1,27 @@
+@startuml
+class Solution44 {
+    Inventory inventory
+
+    +main(String[] args)
+    +String getProductName()
+    +void getJSONData()
+    +void checkInventory(String userItem)
+
+}
+class Item {
+        String name
+        double price
+        int quantity
+
+        +String getName(): name
+        +double getPrice(): price
+        +int getQuantity(): quantity
+}
+
+class Inventory {
+    ArrayList<Item> products
+}
+
+Inventory --o Item
+Solution44 --o Inventory
+@enduml
