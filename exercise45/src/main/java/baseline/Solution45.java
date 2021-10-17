@@ -13,8 +13,8 @@ import java.util.Scanner;
 
 public class Solution45 {
     private static final Scanner input = new Scanner(System.in);
-    private List<String> fileInput = new ArrayList<>();
-    private List<String> replacedList = new ArrayList<>();
+    public List<String> fileInput = new ArrayList<>();
+    public List<String> replacedList = new ArrayList<>();
     private static final File data = new File("data/exercise45_input.txt");
 
     public static void main(String[] args) {
