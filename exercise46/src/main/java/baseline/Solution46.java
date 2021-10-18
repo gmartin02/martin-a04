@@ -11,7 +11,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class Solution46 {
-    public String fileString = "";
+    String fileString = "";
     File data = new File("data/exercise46_input.txt");
 
     public static void main(String[] args) {
