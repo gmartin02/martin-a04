@@ -1,3 +1,7 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 4 Solutions
+ *  Copyright 2021 Gabriel Martin
+ */
 package baseline;
 
 import java.io.BufferedWriter;
@@ -7,7 +11,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class Solution46 {
-    String fileString = "";
+    public String fileString = "";
     File data = new File("data/exercise46_input.txt");
 
     public static void main(String[] args) {

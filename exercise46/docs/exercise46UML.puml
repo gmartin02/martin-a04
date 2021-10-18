@@ -1,0 +1,14 @@
+@startuml
+class Solution46 {
+
+    +String fileString = ""
+    {field}File data = new File("data/exercise46_input.txt")
+
+    +main(String[] args)
+    +getFileData() : String
+    +countInstancesOfWords(): Map<String, Integer>
+    +writeToFile(Map<String, Integer> countedWords)
+
+}
+
+@enduml
