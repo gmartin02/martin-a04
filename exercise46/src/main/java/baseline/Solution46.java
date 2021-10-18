@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Solution46 {
     String fileString = "";
@@ -51,8 +52,16 @@ public class Solution46 {
                 countedWords.put(arrayList.get(i), countedWords.get(arrayList.get(i)) + 1);
             }
         }
+
         //return the new map
-        return countedWords;
+        return countedWords.entrySet().stream()
+                .sorted(Comparator.comparingInt(e -> -e.getValue()))
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (a, b) -> { throw new AssertionError(); },
+                        LinkedHashMap::new
+                ));
     }
 
     public void writeToFile(Map<String, Integer> countedWords) {
@@ -63,7 +72,7 @@ public class Solution46 {
             //create a buffered reader insider a try/catch block
             try (BufferedWriter bw = new BufferedWriter(new FileWriter("data/exercise46_output.txt"))) {
                 //for loop through the size of the map
-                for(int i = countedWords.size() - 1;i >= 0; i--) {
+                for(int i = 0;i < countedWords.size(); i++) {
                     //for each key print out its frequency with asterisks
                     bw.write(keyString.get(i) + " ");
                     for(int j = 0; j < countedWords.get(keyString.get(i));j++) {
