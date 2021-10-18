@@ -54,6 +54,7 @@ public class Solution46 {
         }
 
         //return the new map
+        //this sorts by value in descending order
         return countedWords.entrySet().stream()
                 .sorted(Comparator.comparingInt(e -> -e.getValue()))
                 .collect(Collectors.toMap(
