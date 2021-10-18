@@ -7,14 +7,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class Solution46Test {
 
     @Test
-    void getFileData() {
+    void getFileDataTest() {
     }
 
     @Test
-    void countInstancesofWords() {
+    void countInstancesofWordsTest() {
     }
 
     @Test
-    void writeToFile() {
+    void writeToFileTest() {
     }
 }

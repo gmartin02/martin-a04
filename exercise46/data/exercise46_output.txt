@@ -1,0 +1,4 @@
+badger *******
+mushroom **
+snake *
+cool **
